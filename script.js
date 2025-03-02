@@ -50,7 +50,3 @@ function clearHistory() {
 document.getElementById("discoverPage").addEventListener("click" , function(){
     window.location.href = "./discover.html";
 });
-document.getElementById("backToDesk").addEventListener("click" , function(event){
-    event.preventDefault();
-    window.location.href="index.html"
-});

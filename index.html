@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-5</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;
+    0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;
+    1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   
+</head>
+
+
+<body class="bg-gray-100 p-6">
+    <div class="max-w-screen-2xl mx-auto bg-white p-6 rounded-xl shadow-md flex ">
+        <div class="w-3/4">
+
+            <!-- =======================Header=============================== -->
+            <header class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl flex items-center">
+                    <img src="assets/logo.png" alt="">
+                    <p class="ml-2">Dev<span class="font-bold">Board</span></p>
+                </h1>
+
+                <div class="flex items-center gap-4">
+
+                        <div id="navbar-count" class="bg-gray-100 px-4 py-2 btn rounded-full flex">
+                            <img src="assets/checkbox.png" alt="" class="mr-2">
+                            <h3 class="font-bold text-2xl">23</h3>
+                        </div>
+            
+                       <div class="ml-5">
+                          <a class="">
+                            <img class="" src="assets/theme-btn.png" alt="">
+                          </a>
+                        </div>
+                    
+                </div>
+            </header>
+
+            <!-- ===============Task Assigned-=============== -->
+            <div class="grid grid-cols-3 gap-4 mb-6">
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
+                    <div class="mr-5">
+                        <img src="assets/checkbox.png" alt="" class="">
+                    </div>
+                    <div>
+                        <p class="font-semibold">Task Assigned</p>
+                         <h2 id="task-count" class="text-2xl font-bold">06</h2>
+                    </div>
+                </div>
+                <div class="bg-blue-600 text-white bg-gradient-to-r from-blue-600 to-blue-400 p-4 rounded-lg flex items-center justify-center">
+                    <img src="assets/board.png" alt="">
+                    <p class="text-lg ml-2">Discover Something New Today!</p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg flex items-center justify-center">
+                    <img src="assets/calender.png" alt="">
+                    <p class="font-semibold text-xl task-date ml-5">Tue, <br><span class="font-bold">Feb 25 2025</span></p>
+                </div>
+                
+            </div>
+
+            <!-- ================================Card Section========================================== -->
+            <div class="grid grid-cols-3 gap-6" id="task-container">
+
+                <!-- card-1 -->
+                <div class="bg-gray-100 p-4 shadow rounded-lg">
+                    <button class="btn bg-white px-4 py-1 rounded-md">ShopEase</button>
+                    <p class="text-lg font-semibold my-4">Fix Mobile Button Issue</p>
+                    <div class="bg-white rounded-md">
+                        <p class="p-4 text-gray-600">Debug using Chrome DevTools, <br>check for overlapping elements, and...</p>
+                    </div>
+                    <div class="flex justify-between my-5">
+                        <div>
+                            <p class="text-sm mt-2">Deadline <br><span class="font-bold"> 21 March 2025</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md mt-2 cursor-pointer" onclick="markAsCompleted('Fix Mobile Button Issue')">Completed</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- card-2 -->
+                <div class="bg-gray-100 p-4 shadow rounded-lg">
+                    <button class="btn bg-white px-4 py-1 rounded-md">CloudSync</button>
+                    <p class="text-lg font-semibold my-4">Add Dark Mode</p>
+                    <div class="bg-white rounded-md">
+                        <p class="p-4 text-gray-600">Store the user's preference in <br> localStorage, update CSS variables....</p>
+                    </div>
+                    <div class="flex justify-between my-5">
+                        <div>
+                            <p class="text-sm mt-2">Deadline <br><span class="font-bold"> 21 March 2025</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md mt-2 cursor-pointer" onclick="markAsCompleted('Add Dark Mode')">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
+                <div class="bg-gray-100 p-4 shadow rounded-lg">
+                    <button class="btn bg-white px-4 py-1 rounded-md">SwiftPay</button>
+                    <p class="text-lg font-semibold my-4">Optimize  Home page </p>
+                    <div class="bg-white rounded-md">
+                        <p class="p-4 text-gray-600">Debug using Chrome DevTools, <br>check for overlapping elements, and...</p>
+                    </div>
+                    <div class="flex justify-between my-5">
+                        <div>
+                            <p class="text-sm mt-2">Deadline <br><span class="font-bold"> 21 March 2025</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md mt-2 cursor-pointer" onclick="markAsCompleted('Optimize  Home page')">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-4 -->
+                <div class="bg-gray-100 p-4 shadow rounded-lg">
+                    <button class="btn bg-white px-4 py-1 rounded-md">Meta</button>
+                    <p class="text-lg font-semibold my-4">Add new emoji 🤲</p>
+                    <div class="bg-white rounded-md">
+                        <p class="p-4 text-gray-600">Debug using Chrome DevTools, <br>check for overlapping elements, and...</p>
+                    </div>
+                    <div class="flex justify-between my-5">
+                        <div>
+                            <p class="text-sm mt-2">Deadline <br><span class="font-bold"> 21 March 2025</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md mt-2 cursor-pointer" onclick="markAsCompleted('Add new emoji 🤲')">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-5 -->
+                <div class="bg-gray-100 p-4 shadow rounded-lg">
+                    <button class="btn bg-white px-4 py-1 rounded-md">Google LLC</button>
+                    <p class="text-lg font-semibold my-4">Integrate OpenAI API </p>
+                    <div class="bg-white rounded-md">
+                        <p class="p-4 text-gray-600">Debug using Chrome DevTools, <br>check for overlapping elements, and...</p>
+                    </div>
+                    <div class="flex justify-between my-5">
+                        <div>
+                            <p class="text-sm mt-2">Deadline <br><span class="font-bold"> 21 March 2025</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md mt-2 cursor-pointer" onclick="markAsCompleted('Integrate OpenAI API')">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-6 -->
+                <div class="bg-gray-100 p-4 shadow rounded-lg">
+                    <button class="btn bg-white px-4 py-1 rounded-md">Glassdoar</button>
+                    <p class="text-lg font-semibold my-4">Improve Job searching </p>
+                    <div class="bg-white rounded-md">
+                        <p class="p-4 text-gray-600">Debug using Chrome DevTools, <br>check for overlapping elements, and...</p>
+                    </div>
+                    <div class="flex justify-between my-5">
+                        <div>
+                            <p class="text-sm mt-2">Deadline <br><span class="font-bold"> 21 March 2025</span></p>
+                        </div>
+                        <div>
+                            <button class="bg-blue-600 text-white px-4 py-2 rounded-md mt-2 cursor-pointer" onclick="markAsCompleted('Improve Job searching')">Completed</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        
+        <!-- ==========Activity Log=================== -->
+        <div class="w-1/4 ml-4 bg-white p-4 shadow rounded-lg h-full flex flex-col items-cente">
+            <div class="">
+                <div class="flex">
+                    <img src="assets/activity.png" alt="" class="h-full mr-2">
+                    <h3 class="font-bold mb-4">Activity Log</h3>
+                </div>
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-md mt-2 cursor-pointer" onclick="clearHistory()">Clear History</button>
+                <div id="activity-log" class="flex-1 overflow-auto mt-2"></div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -52,5 +52,5 @@ document.getElementById("discoverPage").addEventListener("click" , function(){
 });
 document.getElementById("backToDesk").addEventListener("click" , function(event){
     event.preventDefault();
-    window.location.href="main.html"
+    window.location.href="index.html"
 });
